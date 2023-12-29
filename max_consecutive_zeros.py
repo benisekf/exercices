@@ -17,4 +17,4 @@ if __name__ == "__main__":
     test_cases = [22, 25, 268]
     for test_case in test_cases:
         result = max_consecutive_zeros(test_case)
-        print(f"Broj {test_case} ima {result} uzastopnih nula u binarnoj reprezentaciji.")
+        print(f"Broj {test_case} ima {result} uzastopnih nula")
