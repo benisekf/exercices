@@ -15,7 +15,7 @@ class TestMaxConsecutiveZeros(unittest.TestCase):
     def test_case_268(self):
         result = max_consecutive_zeros(268)
         print(f"Result for 268: {result}")
-        self.assertEqual(result, 4)  # Update the expected result to 4
+        self.assertEqual(result, 4)
 
 if __name__ == '__main__':
     unittest.main()
