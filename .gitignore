@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 __pycache__/
 *.pyc
 *.pyo
 
 venv/
+=======
+__pycache__/
+*.pyc
+*.pyo
+
+venv/
+>>>>>>> b5add8863aba76eced1e6bb61a2acc627438c7f9
