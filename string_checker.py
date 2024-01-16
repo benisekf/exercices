@@ -7,7 +7,6 @@ def is_valid_string(s):
             if not stack or (char == ')' and stack[-1] != '(') or (char == ']' and stack[-1] != '['):
                 return False
             stack.pop()
-
     return not stack
 print(is_valid_string("()"))      
 print(is_valid_string("([])"))     
