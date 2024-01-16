@@ -1,6 +1,5 @@
 def is_valid_string(s):
     stack = []
-
     for char in s:
         if char in '([{':
             stack.append(char)
@@ -10,7 +9,6 @@ def is_valid_string(s):
             stack.pop()
 
     return not stack
-
 print(is_valid_string("()"))      
 print(is_valid_string("([])"))     
 print(is_valid_string("{[()]}"))   
