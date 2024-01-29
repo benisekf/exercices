@@ -18,13 +18,16 @@ class LinkedList:
         current = self.head
         while current:
             if current.data == target:
-                return "Node"
+                return current  
             current = current.next
-        return "Null"
+        return None 
 linked_list = LinkedList()
 values = [5, 3, 6, 1, 0]
 for value in values:
     linked_list.add(value)
-search_value = 6
-result = linked_list.search(search_value)
-print(result)
+search_value = 1
+result_node = linked_list.search(search_value)
+if result_node:
+    print(f"Node {result_node.data}")
+else:
+    print("Null")
