@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script type="text/javascript" src="script.js"></script>
+    <title>ABC</title>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #letterTable {
+            border-collapse: collapse;
+        }
+        #letterTable td {
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
 </head>
-<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-    <table style="border-collapse: collapse; border: 2px solid black; font-size: 20px;">
-        <tr style="border: 2px solid black">
-            <td style="border: 2px solid black; padding: 15px;" id="cell1">A</td>
+<body>
+    <table id="letterTable">
+        <tr>
+            <td id="cellA">A</td>
         </tr>
         <tr>
-            <td  style="border: 2px solid black; padding: 15px;" id="cell2">B</td>
+            <td id="cellB">B</td>
         </tr>
         <tr>
-            <td  style="border: 2px solid black; padding: 15px;" id="cell3">C</td>
+            <td id="cellC">C</td>
         </tr>
     </table>
 </body>
 </html>
+

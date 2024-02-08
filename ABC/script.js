@@ -1,22 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    setInterval(() => {
-      mixAbc();
-    }, 2000);
-  });
-  function mixAbc() {
-    let rand = Math.floor(Math.random() * 3) + 1;
-    console.log(rand);
-  
-    const letters = ['A', 'B', 'C'];
-    for (let i = 0; i < letters.length; i++) {
-      document.getElementById(rand).innerText = letters[i];
-      rand = getNextElem(rand);
-    }
-  }
-  function getNextElem(number) {
-    if (number >= 3) {
-      number = number - 3;
-    }
-    return number + 1;
-  }
-  
+function moveLetters() {
+  var table = document.getElementById("letterTable");
+  var rows = table.getElementsByTagName("tr");
+  var letterA = rows[0].getElementsByTagName("td")[0].innerHTML;
+  var letterB = rows[1].getElementsByTagName("td")[0].innerHTML;
+  var letterC = rows[2].getElementsByTagName("td")[0].innerHTML;
+  rows[0].getElementsByTagName("td")[0].innerHTML = letterB;
+  rows[1].getElementsByTagName("td")[0].innerHTML = letterC;
+  rows[2].getElementsByTagName("td")[0].innerHTML = letterA;
+}
+setInterval(moveLetters, 2000);
