@@ -1,11 +1,11 @@
-function moveLetters() {
-  var table = document.getElementById("letterTable");
-  var rows = table.getElementsByTagName("tr");
-  var letterA = rows[0].getElementsByTagName("td")[0].innerHTML;
-  var letterB = rows[1].getElementsByTagName("td")[0].innerHTML;
-  var letterC = rows[2].getElementsByTagName("td")[0].innerHTML;
-  rows[0].getElementsByTagName("td")[0].innerHTML = letterB;
-  rows[1].getElementsByTagName("td")[0].innerHTML = letterC;
-  rows[2].getElementsByTagName("td")[0].innerHTML = letterA;
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
 }
-setInterval(moveLetters, 2000);
+function moveLetter() {
+  for (let i = 0; i < 10; i++) {
+      document.getElementById("cell" + i).innerHTML = '';
+  }
+  var randomPosition = getRandomInt(10);
+  document.getElementById("cell" + randomPosition).innerHTML = 'A';
+}
+setInterval(moveLetter, 1000);
