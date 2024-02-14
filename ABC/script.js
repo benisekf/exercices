@@ -1,11 +1,10 @@
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-function moveLetter() {
-  for (let i = 0; i < 10; i++) {
-      document.getElementById("cell" + i).innerHTML = '';
+function moveLetters() {
+  var table = document.getElementById("letterTable");
+  var cells = table.getElementsByTagName("td");
+  for (let i = 0; i < cells.length; i++) {
+      cells[i].innerHTML = '';
   }
-  var randomPosition = getRandomInt(10);
-  document.getElementById("cell" + randomPosition).innerHTML = 'A';
+  var randomPosition = Math.floor(Math.random() * cells.length);
+  cells[randomPosition].innerHTML = 'A';
 }
-setInterval(moveLetter, 1000);
+setInterval(moveLetters, 1000);
